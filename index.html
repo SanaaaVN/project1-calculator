@@ -10,16 +10,16 @@
     <h1>CALCULATOR</h1>
 
     <div class="container">
-        <form action="">
+        <form action="" onsubmit="event.preventDefault();">
             <p>CASIO</p>
 
-            <input type="text" id="screen">
+            <input type="text" id="screen" readonly> 
             <br>
 
             <input class="button number" type="button" value="7" onclick="btnclick(value)">
             <input class="button number" type="button" value="8" onclick="btnclick(value)">
             <input class="button number" type="button" value="9" onclick="btnclick(value)">
-            <input nput class="button operator" type="button" value="/" onclick="btnclick(value)">
+            <input class="button operator" type="button" value="/" onclick="btnclick(value)">
 
             <br>
 
@@ -29,6 +29,7 @@
             <input class="button operator" type="button" value="*" onclick="btnclick(value)">
 
             <br>
+            
             <input class="button number" type="button" value="1" onclick="btnclick(value)">
             <input class="button number" type="button" value="2" onclick="btnclick(value)">
             <input class="button number" type="button" value="3" onclick="btnclick(value)">
@@ -37,13 +38,17 @@
             <br>
             <input class="button clear" type="button" value="c" onclick="clearscreen()">
             <input class="button number" type="button" value="0" onclick="btnclick(value)">
-            <input class="button result" type="button" value="=">
+            <input class="button result" type="button" value="=" onclick="findResult()"> 
             <input class="button operator" type="button" value="-" onclick="btnclick(value)">
             
+            <br>
+            <!-- ബ്രാക്കറ്റ്സിന് വേണ്ടി പുതിയ ഒരു വരി കൂടി താഴെ ആഡ് ചെയ്തു -->
+            <input class="button operator" type="button" value="(" onclick="btnclick(value)">
+            <input class="button operator" type="button" value=")" onclick="btnclick(value)">
+            <input class="button operator" type="button" value="." onclick="btnclick(value)">
+            <input class="button operator" type="button" value="←" onclick="backspace()"> 
             
         </form>
-
-
     </div>
 
     <script src="./cal.js"></script>
